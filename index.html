@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section
+        class="flex items-center justify-center min-h-screen bg-[url('/img/login_background.jpg')] bg-center bg-cover">
+        <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
+            <!-- left side -->
+            <div class="flex flex-col justify-center p-8 md:p-14">
+                <span class="mb-3 text-blue-800 text-4xl font-bold">Login as a Admin User</span>
+                <span class="text-blue-600 mb-8">
+                    Welcom back! Please enter your details
+                </span>
+                <div class="py-4">
+                    <span class="mb-2 text-md">Email</span>
+                    <input type="text" placeholder="Email address"
+                        class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                        name="email" id="email" />
+                </div>
+                <div class="py-4">
+                    <span class="mb-2 text-md">Password</span>
+                    <input type="password" name="password" id="password" placeholder="Password" 
+                        class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500">
+                </div>
+                <div class="flex justify-between w-full py-4">
+                    <span class="font-bold text-md">Forgot password</span>
+                </div>
+                <button id="btn"
+                    class="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
+                    Sign in
+                </button>
+            </div>
+            <!-- right side -->
+            <div class="relative">
+                <img src="img\Admin_login_img.png" alt="img"
+                    class="w-[600px] h-full hidden rounded-r-2xl md:block object-cover">
+            </div>
+        </div>
+    </section>
+    <script src="api\login\loginapi.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2a9dd86937.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body class="text-gray-800 font-inter">
+    
+    <!-- start: Sidebar -->
+    <div class="fixed left-0 top-0 w-64 h-full bg-blue-800 p-4 z-50 sidebar-menu transition-transform">
+        <a href="#" class="flex items-center pb-4 border-b border-b-white-800">
+            <img src="https://placehold.co/32x32" alt="" class="w-8 h-8 rounded object-cover">
+            <span class="text-lg font-bold text-white ml-3">Logo</span>
+        </a>
+        <ul class="mt-4">
+            <li class="mb-1 group active">
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="fa-solid fa-house mr-3"></i>
+                    <span class="text-sm">Dashboard</span>
+                </a>
+            </li>
+            <li class="mb-1 group">
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="fa-solid fa-list-check mr-3"></i>
+                    <span class="text-sm">List</span>
+                </a>
+            </li>
+            <li class="mb-1 group">
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="fa-solid fa-user mr-3"></i>
+                    <span class="text-sm">Services</span>
+                </a>
+            </li>
+            <li class="mb-1 group">
+                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="fa-solid fa-gear mr-3"></i>
+                    <span class="text-sm">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+    <!-- start: Main -->
+    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-blue-500 min-h-screen transition-all main">
+        <div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+            <button type="button" class="text-lg text-gray-600 sidebar-toggle">
+                <i class="fa-solid fa-sliders"></i>
+            </button>
+            <ul class="flex items-center text-sm ml-4">
+                <li class="mr-2">
+                    <a href="#" class="text-gray-400 hover:text-slate-950 font-medium">Dashboard</a>
+                </li>
+                <li class="text-gray-600 mr-2 font-medium">/</li>
+                <li class="text-gray-600 mr-2 font-medium">Analytics</li>
+            </ul>
+            <ul class="ml-auto flex items-center">
+                <li class="mr-1 dropdown">
+                    <button type="button" class="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-slate-950">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
+                        <form action="" class="p-4 border-b border-b-gray-100">
+                            <div class="relative w-full">
+                                <input type="text" class="py-2 pr-4 pl-10 bg-gray-50 w-full outline-none border border-gray-100 rounded-md text-sm focus:border-blue-500" placeholder="Search...">
+                                <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button type="button" class="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-slate-950">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                    <div class="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
+                        <div class="flex items-center px-4 pt-4 border-b border-b-gray-100 notification-tab">
+                            <button type="button" data-tab="notification" data-tab-page="notifications" class="text-slate-950 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1 active">Notifications</button>
+                            <button type="button" data-tab="notification" data-tab-page="messages" class="text-slate-950 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1">Messages</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown ml-3">
+                    <button type="button" class="dropdown-toggle flex items-center">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
+                        <li>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-slate-950 hover:text-blue-500 hover:bg-gray-50">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-slate-950 hover:text-blue-500 hover:bg-gray-50">Settings</a>
+                        </li>
+                        <li id="logout" onclick="logout()">
+                            <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-slate-950 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="p-6">
+            <div class="grid grid-cols-1 lg:grid-cols- gap-6 mb-6">
+                <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
+                    <div class="flex justify-between mb-4 items-start">
+                        <div class="font-medium text-lg">Dashboard</div>
+                        <div><button  onclick="addstudent()" class="rounded-md bg-blue-500 hover:bg-blue-800 shadow-xl text-white p-2 uppercase mr-2">add student</button></div>
+                    </div>
+                    <!-- Table head -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[540px]" data-tab-for="order" data-page="active">
+                            <thead>
+                                <tr>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">Sno.</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">Roll no.</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left">first name</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left">last name</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">email address</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">course</th>
+                                    <th class="text-[15px] uppercase tracking-wide font-medium text-slate-950 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md">operation</th>
+                                </tr>
+                            </thead>
+                            <!-- Table body -->
+                            <tbody id="table-body">
+                                    <tr>
+                                        <td class="py-1 px-4 border-b border-b-gray-50">
+                                            <span class="text-slate-950 text-sm font-medium ml-2 truncate">1</span>
+                                        </td>
+                                        <td class="py-1 px-4 border-b border-b-gray-50">
+                                                <span class="text-slate-950 text-sm font-medium ml-2 truncate">12367980</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-slate-950">Prakash</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-slate-950">Goyal</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-slate-950">prakashgoyal059@gmail.com</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-slate-950">B.C.A</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span><button class="rounded-md bg-blue-500 hover:bg-blue-800 shadow-xl text-white p-2 uppercase mr-2">Update</button></span>
+                                            <span><button class="rounded-md bg-red-500 hover:bg-red-700 shadow-xl text-white p-2 uppercase">delete</button></span>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- end: Main -->
+    
+    <!-- Add student form -->
+
+    
+
+      <!-- js -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="api\agent\adminpanal.js"></script>
+</body>
+</html>

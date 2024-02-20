@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2a9dd86937.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section
+        class="flex items-center justify-center min-h-screen bg-[url('/img/login_background.jpg')] bg-center bg-cover">
+
+        <!-- component -->
+
+        <div class="container max-w-screen-lg mx-auto">
+            <div>
+                <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                    <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                        <div class="lg:col-span-3">
+                            <div class="text-blue-800 mb-4">
+                                <p class="font-medium text-xl">New Student Details</p>
+                                <p>Please fill out all the fields.</p>
+                            </div>
+                            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                                <div class="md:col-span-5">
+                                    <label for="full_name">First Name</label>
+                                    <input type="text" placeholder="first name" name="first_name" id="first_name"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" required />
+                                    <label for="full_name">Last Name</label>
+                                    <input type="text" placeholder="last name" name="last_name" id="last_name"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" required />
+                                </div>
+
+                                <div class="md:col-span-5">
+                                    <label for="email">Student ID</label>
+                                    <input type="text" name="student id" id="student id"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
+                                        placeholder="Enter your Student ID" required />
+                                </div>
+
+                                <div class="md:col-span-5">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" name="email" id="email"
+                                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
+                                        placeholder="email@domain.com" required />
+                                
+                                        <div class="md:col-span-2">
+                                            <label for="country">Course</label>
+                                            <select name="courseSelect" id="courseSelect" class="px-4 h-10 border mt-1 rounded bg-gray-50 outline-none text-gray-800 w-full bg-transparent" required>
+                                                <option value="" selected disabled>Select a Course</option>
+                                                <option value="BDS">BDS (Bachelor of Dental Surgery)</option>
+                                                <option value="Architecture">Architecture</option>
+                                                <option value="Animation">Animation</option>
+                                                <option value="Aviation">Aviation</option>
+                                                <option value="BCA">BCA (Bachelor of Computer Applications)</option>
+                                                <option value="HotelManagement">Hotel Management</option>
+                                                <option value="Law">Law</option>
+                                                <option value="Paramedical">Paramedical</option>
+                                                <option value="BachelorOfEducation">Bachelor of Education</option>
+                                                <option value="Engineering">Engineering</option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Physiotherapy">Physiotherapy</option>
+                                              </select>
+                                          </div>
+                                    <div>
+                                        
+                                        <div class="md:col-span-5 text-right">
+                                            <div class="inline-flex items-end">
+                                                <button onclick="saveStudent()"
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    </section>
+   <script src="api\agent\adminpanal.js"></script>
+</body>
+
+</html>
